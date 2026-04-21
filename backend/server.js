@@ -27,13 +27,23 @@ if (!process.env.MONGO_URI) {
 
 const app = express();
 
+const allowedOrigins = (process.env.FRONTEND_ORIGIN || "http://localhost:5173")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
 // Connect to Database
 connectDB();
 
 // Security Middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.FRONTEND_ORIGIN || "http://localhost:5173",
+  origin: (origin, callback) => {
+    // Allow non-browser requests (health checks, curl, server-to-server).
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error("Not allowed by CORS"));
+  },
   credentials: true
 }));
 app.use(express.json());
@@ -61,6 +71,10 @@ app.use("/api/contact", contactRoutes);
 // Root Endpoint
 app.get("/", (req, res) => {
   res.send("MindCare API is running...");
+});
+
+app.get("/healthz", (req, res) => {
+  res.status(200).json({ status: "ok" });
 });
 
 // Error Handling

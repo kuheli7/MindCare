@@ -1,0 +1,66 @@
+{
+  "name": "mindcare",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config backend/jest.config.cjs",
+    "test:backend:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config backend/jest.config.cjs --coverage",
+    "test:frontend": "vitest run --config vitest.config.js --passWithNoTests",
+    "test:frontend:coverage": "vitest run --config vitest.config.js --coverage",
+    "test:coverage": "npm run test:backend:coverage && npm run test:frontend:coverage"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "framer-motion": "^12.34.3",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.1.6",
+    "nodemailer": "^6.10.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react-swc": "^4.2.2",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "jsdom": "^27.0.1",
+    "supertest": "^7.1.1",
+    "vite": "^7.2.4",
+    "vitest": "^3.2.4"
+  },
+  "description": "Hi please update the changes in these files also for easy tracking",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albin7657/MindCare.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albin7657/MindCare/issues"
+  },
+  "homepage": "https://github.com/albin7657/MindCare#readme"
+}

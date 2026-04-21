@@ -1,0 +1,6 @@
+﻿[dotenv@17.2.3] injecting env (3) from backend\.env -- tip: ΓÜÖ∩╕Å  specify custom .env file path with { path: '/custom/path/.env' }
+Connected to DB
+Sending test submission...
+Response: {
+  "error": "Failed to process assessment results"
+}

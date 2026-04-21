@@ -1,0 +1,68 @@
+/* SpecializedTest.css – shared styles for all 5 specialized assessment pages */
+
+.specialized-test-page {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+/* ─── Banner ─────────────────────────────────────────────────── */
+.specialized-test-banner {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 36px 48px;
+    animation: fadeIn 0.45s ease;
+}
+
+.specialized-test-banner-icon {
+    font-size: 52px;
+    line-height: 1;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+}
+
+.specialized-test-banner-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 6px;
+}
+
+.specialized-test-banner-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Colour accents per test type */
+.stress-banner,
+.anxiety-banner,
+.depression-banner,
+.burnout-banner,
+.sleep-banner {
+    background: var(--primary-color);
+}
+
+/* ─── Content wrapper ─────────────────────────────────────────── */
+.specialized-test-page .questionnaire-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 24px 60px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .specialized-test-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+    }
+
+    .specialized-test-banner-title {
+        font-size: 22px;
+    }
+
+    .specialized-test-page .questionnaire-container {
+        padding: 16px 12px 40px;
+    }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "69932ffb2afae1abf62f16f8",
+    "username": "team10admin",
+    "email": "admin@mindcare.com",
+    "password": "$2b$10$oiO74TiTyCLfUijcqH6gRum4VnBiSdAhl0Cql1JYyEpiLa3QDLRl.",
+    "admin_id": "ADM001",
+    "__v": 0
+  },
+  {
+    "_id": "69936a92b655e0293ded64e1",
+    "username": "albin",
+    "email": "albin@mindcare.com",
+    "password": "$2b$10$MwK0hDGJxdXJM4RihnUQdu0Jn.hUG9txbctVrd2IOd/rVsY3QTdn.",
+    "admin_id": "ADM003",
+    "__v": 0
+  }
+]

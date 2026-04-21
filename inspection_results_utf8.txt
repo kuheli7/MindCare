@@ -1,0 +1,30 @@
+﻿[dotenv@17.2.3] injecting env (3) from backend\.env -- tip: ΓÜÖ∩╕Å  load multiple .env files with { path: ['.env.local', '.env'] }
+Connected to MongoDB
+
+--- AssessmentAttempts (11) ---
+ID: 6997f69d6cf592e8befe6e25 | User: MISSING | Score: MISSING | Answers: 0 | Date: undefined
+   [!] Orphaned from user: student_id 6997f69d6cf592e8befe6e23 not found
+   [!] Incomplete: Score missing for this attempt
+ID: 699cbb4229de24cbd7da6bd7 | User: MISSING | Score: MISSING | Answers: 5 | Date: Tue Feb 24 2026 02:10:34 GMT+0530 (India Standard Time)
+   [!] Orphaned from user: student_id 676f8e7b1234567890abcdef not found
+   [!] Incomplete: Score missing for this attempt
+ID: 699cbc6c29de24cbd7da6c2f | User: MISSING | Score: MISSING | Answers: 20 | Date: Tue Feb 24 2026 02:15:32 GMT+0530 (India Standard Time)
+   [!] Orphaned from user: student_id 699c9a99ca226904bf52dd63 not found
+   [!] Incomplete: Score missing for this attempt
+ID: 699cbdcc29de24cbd7da6dce | User: MISSING | Score: MISSING | Answers: 21 | Date: Tue Feb 24 2026 02:21:24 GMT+0530 (India Standard Time)
+   [!] Orphaned from user: student_id 699caa16bb2da031ded19e0d not found
+   [!] Incomplete: Score missing for this attempt
+ID: 699d1cec795259b3f835bc15 | User: MISSING | Score: MISSING | Answers: 18 | Date: Tue Feb 24 2026 09:07:16 GMT+0530 (India Standard Time)
+   [!] Orphaned from user: student_id 699c9a99ca226904bf52dd63 not found
+   [!] Incomplete: Score missing for this attempt
+ID: 699ddff8abf91039ec3b4877 | User: Guest | Score: MISSING | Answers: 20 | Date: Tue Feb 24 2026 22:59:28 GMT+0530 (India Standard Time)
+   [!] Incomplete: Score missing for this attempt
+ID: 699deadb9c192e49d77af1b5 | User: User_4484 | Score: FOUND | Answers: 20 | Date: Tue Feb 24 2026 23:45:55 GMT+0530 (India Standard Time)
+ID: 699deadf9c192e49d77af1dc | User: User_8079 | Score: FOUND | Answers: 20 | Date: Tue Feb 24 2026 23:45:59 GMT+0530 (India Standard Time)
+ID: 699debba9c192e49d77af364 | User: albin | Score: FOUND | Answers: 20 | Date: Tue Feb 24 2026 23:49:38 GMT+0530 (India Standard Time)
+ID: 699ed0e3d824be1738ae8cfd | User: User_9478 | Score: FOUND | Answers: 18 | Date: Wed Feb 25 2026 16:07:23 GMT+0530 (India Standard Time)
+ID: 699ed414bcede8c2221a168e | User: User_8021 | Score: FOUND | Answers: 24 | Date: Wed Feb 25 2026 16:21:00 GMT+0530 (India Standard Time)
+
+--- Scores (5) ---
+
+--- Answers (Total: 186) ---

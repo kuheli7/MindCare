@@ -1,0 +1,389 @@
+.home2-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* Try these fonts for MindCare:
+     - 'Poppins' (modern, clean)
+     - 'Montserrat' (geometric, bold)
+     - 'Raleway' (elegant, sophisticated)
+     - 'Playfair Display' (classic, serif)
+     - 'Inter' (modern, readable)
+  */
+}
+
+/* Hero Background with Image */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.hero-background.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Black gradient overlay that merges into background */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 50, 100, 0.05) 0%,
+    rgba(15, 30, 80, 0.10) 50%,
+    rgba(10, 20, 60, 0.15) 100%
+  );
+  background-size: 100% 100%;
+}
+
+/* Content on top of image */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+
+/* Sparkles Animation */
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  animation: sparkle-animation 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes sparkle-animation {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sparkle:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 40%; left: 80%; animation-delay: 0.3s; }
+.sparkle:nth-child(3) { top: 60%; left: 25%; animation-delay: 0.6s; }
+.sparkle:nth-child(4) { top: 80%; left: 70%; animation-delay: 0.9s; }
+.sparkle:nth-child(5) { top: 30%; left: 50%; animation-delay: 1.2s; }
+.sparkle:nth-child(6) { top: 70%; left: 45%; animation-delay: 1.5s; }
+.sparkle:nth-child(7) { top: 15%; left: 65%; animation-delay: 0.4s; }
+.sparkle:nth-child(8) { top: 85%; left: 30%; animation-delay: 0.7s; }
+.sparkle:nth-child(9) { top: 50%; left: 10%; animation-delay: 1s; }
+.sparkle:nth-child(10) { top: 25%; left: 90%; animation-delay: 1.3s; }
+
+/* MindCare Title Animation */
+.hero-brand {
+  font-size: 96px;
+  font-weight: 900;
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
+  background: linear-gradient(135deg, #4A9FF5 0%, #FFFFFF 50%, #4A9FF5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(-50px) scale(0.8);
+  transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-shadow: 0 0 30px rgba(74, 159, 245, 0.5);
+  letter-spacing: 2px;
+  text-align: center;
+  align-self: center;
+}
+
+.hero-brand.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.02);
+  }
+}
+
+/* Slogan Container */
+.hero-slogan {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-slogan.visible {
+  opacity: 1;
+}
+
+/* Individual Slogan Words */
+.slogan-word {
+  font-size: 42px;
+  font-weight: 300;
+  color: #FFFFFF;
+  opacity: 0;
+  transform: translateX(-30px);
+  display: inline-block;
+}
+
+.hero-slogan.visible .slogan-word {
+  opacity: 0.75;
+}
+
+.hero-slogan.visible .slogan-word {
+  animation: slideInWord 0.8s ease forwards;
+}
+
+.hero-slogan.visible .word-1 {
+  animation-delay: 0.2s;
+}
+
+.hero-slogan.visible .word-2 {
+  animation-delay: 0.5s;
+}
+
+.hero-slogan.visible .word-3 {
+  animation-delay: 0.8s;
+}
+
+/* Slide In Animation for Words */
+@keyframes slideInWord {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add floating to slogan words after they appear */
+.hero-slogan.visible .slogan-word {
+  animation: slideInWord 0.8s ease forwards;
+}
+
+@keyframes floatWord {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-slogan.visible .word-1 {
+  animation-delay: 0.2s;
+}
+
+.hero-slogan.visible .word-2 {
+  animation-delay: 0.5s;
+}
+
+.hero-slogan.visible .word-3 {
+  animation-delay: 0.8s;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 18px 50px;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4A9FF5 0%, #2A7FD5 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 30px rgba(74, 159, 245, 0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.cta-button.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease forwards 1.2s, pulse 2s ease-in-out infinite 2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(74, 159, 245, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(74, 159, 245, 0.7);
+    transform: scale(1.05);
+  }
+}
+
+/* Mobile pulse animation with purple-blue */
+@media (max-width: 768px) {
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 10px 30px rgba(107, 79, 224, 0.4);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 10px 40px rgba(107, 79, 224, 0.7);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(74, 159, 245, 0.7);
+}
+
+.cta-button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 30px 30px;
+    padding-top: 80px;
+  }
+  
+  .hero-brand {
+    font-size: 56px;
+    margin-bottom: 40px;
+    /* Mobile: Saturated purple-blue gradient */
+    background: linear-gradient(135deg, #6B4FE0 0%, #FFFFFF 50%, #4A7FFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-slogan {
+    flex-direction: column;
+    gap: 35px;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  
+  .slogan-word {
+    font-size: 28px;
+  }
+  
+  .cta-button {
+    padding: 15px 40px;
+    font-size: 16px;
+    /* Mobile: Purple-blue button */
+    background: linear-gradient(135deg, #6B4FE0 0%, #4A7FFF 100%);
+    box-shadow: 0 10px 30px rgba(107, 79, 224, 0.4);
+  }
+  
+  .cta-button:hover {
+    box-shadow: 0 15px 40px rgba(107, 79, 224, 0.7);
+  }
+  
+  /* Use img2.jpg for small screens */
+  .hero-image {
+    content: url('../assets/home_images/img2.jpg');
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 20px 20px;
+    padding-top: 70px;
+  }
+  
+  .hero-brand {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-slogan {
+    margin-left: 20px;
+    gap: 30px;
+    margin-top: 15px;
+  }
+  
+  .slogan-word {
+    font-size: 22px;
+  }
+
+  .combined-test-card {
+    padding: 25px 15px;
+  }
+
+  .combined-test-title {
+    font-size: 20px;
+  }
+
+  .combined-test-description {
+    font-size: 14px;
+  }
+
+  .individual-tests-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
